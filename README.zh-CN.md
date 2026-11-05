@@ -312,3 +312,8 @@ Agent 会检查环境，索要这条视频需要的凭据，生成素材并构�
 ## 许可证
 
 Hypit 采用 [Hypit 开源许可证](./LICENSE)。你创作的视频和其他产出归你所有；第三方模型与服务可能另有条款。
+
+## KIE / fal 本地拉片扩展
+
+本分支新增 `hypit breakdown source.mp4 --to analysis --analysis-provider fal --allow-paid`，输出逐镜证据、独立转写、角色表、JSON / Markdown / HTML 报告，并保留可恢复的任务回执。
+KIE 与 fal 的原生生成 Provider 配置、支持模型和使用边界见[使用指南](docs/zh/guide/kie-fal-breakdown.md)。

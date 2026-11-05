@@ -169,7 +169,8 @@
         "@hypit/speech-estimate/cli",
         "@hypit/whisperx/cli",
         "@hypit/video/cli",
-        "@hypit/studio/cli"
+        "@hypit/studio/cli",
+        "@hypit/breakdown/cli"
       ]
     },
     "packageSources": [
@@ -322,7 +323,8 @@
     "@hypit/script": "workspace:*",
     "@hypit/text-fine": "workspace:*",
     "@hypit/timeline-author": "workspace:*",
-    "@hypit/visual-track": "workspace:*"
+    "@hypit/visual-track": "workspace:*",
+    "@hypit/provider-kie-fal": "workspace:*"
   },
   "dependencies": {
     "@hypit/browser-capture": "workspace:^0.2.0",
@@ -337,6 +339,7 @@
     "koffi": "3.2.1",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "cjs-module-lexer": "2.2.1"
+    "cjs-module-lexer": "2.2.1",
+    "@hypit/breakdown": "workspace:^0.1.0"
   }
 }

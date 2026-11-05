@@ -1,0 +1,10 @@
+{
+  "name": "@hypit/breakdown",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": { ".": "./src/index.ts", "./cli": "./src/cli.ts" },
+  "dependencies": { "@hypit/provider-kie-fal": "workspace:*", "@hypit/media-local": "workspace:^0.2.0", "sharp": "0.35.4" },
+  "peerDependencies": { "@hypit/hypit": "workspace:^0.3.1" }
+}

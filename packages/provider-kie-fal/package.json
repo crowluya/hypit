@@ -1,0 +1,28 @@
+{
+  "name": "@hypit/provider-kie-fal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts"
+  },
+  "hypit": {
+    "activation": "./src/activation.ts"
+  },
+  "dependencies": {
+    "@fal-ai/client": "1.10.1",
+    "@hypit/generation": "workspace:^0.1.0",
+    "@hypit/nano-banana": "workspace:*",
+    "@hypit/grok-imagine": "workspace:*",
+    "@hypit/seedance": "workspace:*"
+  },
+  "peerDependencies": {
+    "@hypit/hypit": "workspace:^0.3.1",
+    "@hypit/runtime-local": "workspace:^0.1.1"
+  },
+  "devDependencies": {
+    "@hypit/executor": "workspace:*"
+  }
+}
