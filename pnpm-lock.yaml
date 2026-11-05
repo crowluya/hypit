@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@hypit/breakdown':
+        specifier: workspace:^0.1.0
+        version: link:packages/breakdown
       '@hypit/browser-capture':
         specifier: workspace:^0.2.0
         version: link:packages/browser-capture
@@ -192,6 +195,9 @@ importers:
       '@hypit/provider-image-opencv-local':
         specifier: workspace:*
         version: link:packages/provider-image-opencv-local
+      '@hypit/provider-kie-fal':
+        specifier: workspace:*
+        version: link:packages/provider-kie-fal
       '@hypit/provider-monid':
         specifier: workspace:*
         version: link:packages/provider-monid
@@ -652,6 +658,21 @@ importers:
       '@hypit/protocol':
         specifier: workspace:*
         version: link:../protocol
+
+  packages/breakdown:
+    dependencies:
+      '@hypit/hypit':
+        specifier: workspace:^0.3.1
+        version: link:../..
+      '@hypit/media-local':
+        specifier: workspace:^0.2.0
+        version: link:../media-local
+      '@hypit/provider-kie-fal':
+        specifier: workspace:*
+        version: link:../provider-kie-fal
+      sharp:
+        specifier: 0.35.4
+        version: 0.35.4(@types/node@24.10.1)
 
   packages/browser-capture:
     dependencies:
@@ -2020,6 +2041,34 @@ importers:
       '@hypit/runtime-local':
         specifier: workspace:*
         version: link:../runtime-local
+
+  packages/provider-kie-fal:
+    dependencies:
+      '@fal-ai/client':
+        specifier: 1.10.1
+        version: 1.10.1
+      '@hypit/generation':
+        specifier: workspace:^0.1.0
+        version: link:../generation
+      '@hypit/grok-imagine':
+        specifier: workspace:*
+        version: link:../grok-imagine
+      '@hypit/hypit':
+        specifier: workspace:^0.3.1
+        version: link:../..
+      '@hypit/nano-banana':
+        specifier: workspace:*
+        version: link:../nano-banana
+      '@hypit/runtime-local':
+        specifier: workspace:^0.1.1
+        version: link:../runtime-local
+      '@hypit/seedance':
+        specifier: workspace:*
+        version: link:../seedance
+    devDependencies:
+      '@hypit/executor':
+        specifier: workspace:*
+        version: link:../executor
 
   packages/provider-monid:
     dependencies:
@@ -3441,6 +3490,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fal-ai/client@1.10.1':
+    resolution: {integrity: sha512-c3AVeH31OioiI2J1BfW8Cryi1DhUYldnY3X35nv6xLMq3fU2NQOo+eYaR5mL2O8MoHHh+HzXdQuIyanIyeq+ug==}
+    engines: {node: '>=18.0.0'}
+
   '@fontsource-variable/inter@5.3.0':
     resolution: {integrity: sha512-OupL48va4JNofb97w6NYeF9S7W/kHNKM0Er8Dem5nqi4jeOLrVJDoE8tZEpnMJmtkvNbB1EIPPwHcdkF6b1oUA==}
 
@@ -3716,6 +3769,10 @@ packages:
     resolution: {integrity: sha512-ZmZNiBO6bkOSh3QNzgfvb1cMY0yMobn6ZQrSMqbAce21qyYL8niIbyipz9N/PIRDciGhsV0wUxnZsxIO+yWsHQ==}
     cpu: [x64]
     os: [win32]
+
+  '@msgpack/msgpack@3.1.3':
+    resolution: {integrity: sha512-47XIizs9XZXvuJgoaJUIE2lFoID8ugvc0jzSHP+Ptfk8nTbnR8g788wv48N03Kx0UkAv559HWRQ3yzOgzlRNUA==}
+    engines: {node: '>= 18'}
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     resolution: {integrity: sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ==}
@@ -4267,6 +4324,10 @@ packages:
   estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
 
+  eventsource-parser@1.1.2:
+    resolution: {integrity: sha512-v0eOBUbiaFojBu2s2NPBfYUoRR9GjcDNvCXVaqEf5vVfpIAh9f8RCo4vXTP8c63QRKCFwoLpMpTdPwwhEKVgzA==}
+    engines: {node: '>=14.18'}
+
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
     engines: {node: '>=12.0.0'}
@@ -4504,6 +4565,9 @@ packages:
 
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
+
+  robot3@0.4.1:
+    resolution: {integrity: sha512-hzjy826lrxzx8eRgv80idkf8ua1JAepRc9Efdtj03N3KNJuznQCPlyCJ7gnUmDFwZCLQjxy567mQVKmdv2BsXQ==}
 
   rolldown@1.2.7:
     resolution: {integrity: sha512-g0EtLvBjTUB7jhyV0S/TCup3v/XSVl45vUIGbOGU4QPiyjTenCe4mKuFvW9fEgYmS2Fo42AUssRmNuMziXdrig==}
@@ -5067,6 +5131,12 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
+  '@fal-ai/client@1.10.1':
+    dependencies:
+      '@msgpack/msgpack': 3.1.3
+      eventsource-parser: 1.1.2
+      robot3: 0.4.1
+
   '@fontsource-variable/inter@5.3.0': {}
 
   '@fontsource-variable/league-spartan@5.3.0': {}
@@ -5076,6 +5146,10 @@ snapshots:
   '@fontsource-variable/noto-sans-sc@5.3.0': {}
 
   '@fontsource/archivo-black@5.3.0': {}
+
+  '@hypit/gpt-image-kits@0.1.1': {}
+
+  '@hypit/seedance-kits@0.1.1': {}
 
   '@iconify-json/simple-icons@1.2.93':
     dependencies:
@@ -5244,6 +5318,8 @@ snapshots:
 
   '@koromix/koffi-win32-x64@3.2.1':
     optional: true
+
+  '@msgpack/msgpack@3.1.3': {}
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     optional: true
@@ -5732,6 +5808,8 @@ snapshots:
 
   estree-walker@2.0.2: {}
 
+  eventsource-parser@1.1.2: {}
+
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
@@ -5969,6 +6047,8 @@ snapshots:
   resolve-pkg-maps@1.0.0: {}
 
   rfdc@1.4.1: {}
+
+  robot3@0.4.1: {}
 
   rolldown@1.2.7:
     dependencies:

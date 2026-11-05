@@ -1,0 +1,24 @@
+{
+  "format": "hypit.runtime-local@1",
+  "dataRoot": ".hypit/runtimes/kie-fal",
+  "credentials": { "env": { "use": "@hypit/credential-store-env" } },
+  "endpoints": {
+    "kie": {
+      "use": "@hypit/provider-kie-fal",
+      "pool": "kie.account",
+      "config": { "service": "kie", "apiKey": { "store": "env", "key": "KIE_API_KEY" } }
+    },
+    "fal": {
+      "use": "@hypit/provider-kie-fal",
+      "pool": "fal.account",
+      "config": { "service": "fal", "apiKey": { "store": "env", "key": "FAL_KEY" } }
+    },
+    "media.local": { "use": "@hypit/media-local" },
+    "html.local": { "use": "@hypit/provider-html-local" }
+  },
+  "bindings": {
+    "@hypit/nano-banana@1#nano-banana-2": "fal",
+    "@hypit/seedance@1#seedance-2-mini": "kie",
+    "@hypit/grok-imagine@1#grok-imagine-video": "fal"
+  }
+}
